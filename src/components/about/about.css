@@ -1,0 +1,8 @@
+.text__container {
+    max-width: 70%;
+    position: relative;
+}
+
+.text-medium {
+    font-size: 1.2rem;
+}
