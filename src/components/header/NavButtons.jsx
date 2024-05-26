@@ -6,7 +6,7 @@ import './header.css'
 const NavButtons = () => {
     return (
         <div className='navbuttons'>
-            <motion.a href='#about' className='nav-text'>About Me</motion.a>
+            <a href='#about' className='nav-text'>About Me</a>
             <a href='#experience' className='nav-text'>Experiences</a>
             <a href='#project' className='nav-text'>Projects</a>
             <a href='#resume' className='nav-text'>Resume</a>

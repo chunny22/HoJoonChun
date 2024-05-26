@@ -9,7 +9,7 @@ const Experience = () => {
         <div className='experience'>
           <h3>Quality Engineering Analyst</h3>
           <div className='experience__content'>
-            <h4>Royal Bank of Canada - Toronto, Canada</h4>
+            <h4><a href='https://www.rbcroyalbank.com' target='_blank'>Royal Bank of Canada - Toronto, Canada</a></h4>
             <small className='text-light'>May 2023 - Aug 2023</small>
             <ul>
               <li>T&O department, under Risk IT team</li>
@@ -20,7 +20,7 @@ const Experience = () => {
         <div className='experience'>
           <h3>Product Software Engineer</h3>
           <div className='experience__content'>
-            <h4>Mitel Networks - Ottawa, Canada</h4>
+            <h4><a href='https://www.mitel.com/' target='_blank'>Mitel Networks - Ottawa, Canada</a></h4>
             <small className='text-light'>Sep 2022 - Dec 2022</small>
             <ul>
               <li>Frontend development team of Mitel One, communication software for businesses</li>
@@ -31,7 +31,7 @@ const Experience = () => {
         <div className='experience'>
           <h3>Software Developer</h3>
           <div className='experience__content'>
-            <h4>March Networks - Ottawa, Canada</h4>
+            <h4><a href='https://www.marchnetworks.com/' target='_blank'>March Networks - Ottawa, Canada</a></h4>
             <small className='text-light'>Jan 2022 - Apr 2022</small>
             <ul>
               <li>Development team of Evidence Vault and Searchlight, data management service for businesses</li>
@@ -42,7 +42,7 @@ const Experience = () => {
         <div className='experience'>
           <h3>Business Intelligence Developer</h3>
           <div className='experience__content'>
-            <h4>Canadian Food Inspection Agency - Ottawa, Canada</h4>
+            <h4><a href='https://inspection.canada.ca/' target='_blank'>Canadian Food Inspection Agency - Ottawa, Canada</a></h4>
             <small className='text-light'>May 2021 - Aug 2021 (Intern) / Sep 2021 - Nov 2021 (Part-time)</small>
             <ul>
               <li>Carried out ETL process, from Oracle databases to enterprise data warehouse</li>

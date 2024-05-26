@@ -6,8 +6,8 @@ const project = () => {
     <section id='project'>
       <h2>My Projects</h2>
       <div className='container content__container'>
-        
         <div className='project'>
+          <div className='image-item'></div>
           <h3>Longitudinal Sentiment Classification of Reddit Posts</h3>
           <div className='project-content'>
             <small className='text-light'>Honours Bachelors Project / arXiv Publication</small>
@@ -18,9 +18,10 @@ const project = () => {
               <li>Recorded entire study results in a detailed report.</li>
             </ul>
           </div>
+          <a href='https://arxiv.org/abs/2401.12382' target='_blank' className='btn'>View Publication</a>
         </div>
-
         <div className='project'>
+          <div className='image-item'></div>
           <h3>Metal Detector</h3>
           <div className='project-content'>
             <small className='text-light'>Side project @ Jinione Systems</small>
@@ -29,9 +30,10 @@ const project = () => {
               <li>Detects nearby magnetic waves with the device's magnetometer.</li>
             </ul>
           </div>
+          <a href='https://github.com/chunny22/Metal_Detector' target='_blank' className='btn'>View GitHub</a>
         </div>
-
         <div className='project'>
+          <div className='image-item'></div>
           <h3>Space Track</h3>
           <div className='project-content'>
             <small className='text-light'>Pygame Video Game</small>
@@ -41,6 +43,7 @@ const project = () => {
               <li>Consists various interactive sprites along with animations applied to each object, playable or non-playable.</li>
             </ul>
           </div>
+          <a href='https://github.com/chunny22/Space_Track' target='_blank' className='btn'>View GitHub</a>
         </div>
       </div>
     </section>

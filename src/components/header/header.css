@@ -21,24 +21,16 @@ header {
     max-width: 80%;
 }
 
-.cta__container {
-    margin-top: 1rem;
-    display: block;
-    gap: 1.2rem;
-}
-
 .header-socials {
-    margin-top: 1rem;
     display: flex;
     flex-direction: row;
     gap: 0.8rem;
-    width: 3rem;
     position: absolute;
 }
 
 .header-socials svg {
-    width: 1.7rem;
-    height: 1.7rem;
+    width: 2.2rem;
+    height: 2.2rem;
 }
 
 .hs-button:hover {

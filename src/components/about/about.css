@@ -1,8 +1,14 @@
 .text__container {
-    max-width: 70%;
+    max-width: 75%;
     position: relative;
 }
 
 .text-medium {
     font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 600px) {
 }

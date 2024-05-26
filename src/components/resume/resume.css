@@ -1,3 +1,20 @@
 .section > h5 {
     margin-top: 5%;
 }
+
+.resumeDoc {
+    width: 35rem;
+    height: 45rem;
+    overflow: hidden;
+}
+
+.resume__container {
+    text-align: center;
+    display: grid;
+    justify-content: center;
+}
+
+.resume__container > .btn-primary {
+    margin-top: 1rem;
+    margin-bottom: 6rem;
+}

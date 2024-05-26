@@ -1,24 +1,19 @@
-import React from 'react';
-import { Document, Page } from '@react-pdf/renderer';
+import React, { useState } from 'react';
 import './resume.css';
 import ResumePDF from '../../assets/resume.pdf';
 
 const Resume = () => {
-  console.log(ResumePDF);
-
-  function onDocumentLoadSuccess(params) {
-    console.log("LOAD Success ", params);
-  }
 
   return (
     <section id='resume'>
       <h2>My Resume</h2>
-      <Document 
-        file={ResumePDF}
-        onLoadSuccess={onDocumentLoadSuccess}
-      ><Page pageNumber={1} /></Document>
-      <a href= {ResumePDF} download= 'resume.pdf' className='btn btn-primary'>Download</a>
-
+      <div className='container resume__container'>
+        <iframe 
+          src="https://drive.google.com/file/d/1pHFfu3AVrBZQIehADDa3uwPW3JR0TE79/preview" 
+          className='resumeDoc'>
+        </iframe> 
+        <a href={ResumePDF} download='resume.pdf' className='btn btn-primary'>Download</a>
+      </div>
     </section>
   )
 }
