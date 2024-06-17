@@ -6,6 +6,9 @@ const Experience = () => {
     <section id='experience'>
       <h2>My Experiences</h2>
       <div className='container content__container'>
+        <a href='#resume' className='new-experience'>
+          <h3>Currently looking for a new opportunity!</h3>
+        </a>
         <div className='experience'>
           <h3>Quality Engineering Analyst</h3>
           <div className='experience__content'>
@@ -18,7 +21,7 @@ const Experience = () => {
           </div>
         </div>
         <div className='experience'>
-          <h3>Product Software Engineer</h3>
+          <h3>Product Software Developer</h3>
           <div className='experience__content'>
             <h4><a href='https://www.mitel.com/' target='_blank'>Mitel Networks - Ottawa, Canada</a></h4>
             <small className='text-light'>Sep 2022 - Dec 2022</small>

@@ -3,6 +3,16 @@
     position: relative;
 }
 
+.text-medium > a {
+    text-decoration: underline;
+    font-weight: 600;
+    color: var(--color-medium);
+}
+
+.text-medium > a:hover {
+    color: var(--color-primary);
+}
+
 .text-medium {
     font-size: 1.2rem;
 }

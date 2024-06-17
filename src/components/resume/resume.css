@@ -16,5 +16,6 @@
 
 .resume__container > .btn-primary {
     margin-top: 1rem;
-    margin-bottom: 6rem;
+    margin-bottom: 2rem;
+    justify-self: center;
 }

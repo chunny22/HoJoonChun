@@ -19,7 +19,7 @@ const About = () => {
                 <br /><br />
                 I have done numerous internships in the past, and I am currently looking for new opportunities as a new grad. I have done couple 
                 of personal projects, along with a publication on arXiv. You can find out about all of them below in this site. If you'd like to 
-                reach out, simply click on the 'Send Email' button up top or my social links on the left side of this site.
+                reach out, check out my socials below my name in <a href='#'>this section.</a>
             </p>
         </div>
         

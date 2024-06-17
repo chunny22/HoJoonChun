@@ -51,22 +51,16 @@ body {
 
 .content__container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     width: 85%;
 }
 
-.content__container > div {
+.content__container > div, .new-experience {
     background: var(--color-bg-variant);
     padding: 2rem 2rem;
     border-radius: 2rem;
     border: 1px solid transparent;
-    transition: var(--transition);
-}
-
-.content__container > div:hover {
-    border-color: var(--color-primary-variant);
-    cursor: default;
 }
 
 .content__container > div h3 {
@@ -86,6 +80,7 @@ h1 {
 }
 
 section {
+    padding-top: 5rem;
     min-height: 85vh;
 }
 
@@ -97,7 +92,6 @@ section > h2, section > h5 {
 section > h2 {
     color: var(--color-primary);
     margin-bottom: 1rem;
-    margin-top: 6rem;
     font-size: 2rem;
 }
 
@@ -120,7 +114,6 @@ a {
     color: var(--color-primary);
     padding: 0.75rem 1.2rem;
     border-radius: 0.4rem;
-    cursor: pointer;
     border: 1px solid var(--color-primary);
     transition: var(--transition);
 }

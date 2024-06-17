@@ -1,4 +1,28 @@
+.project {
+    position: relative;
+}
+
 .project-content {
+    margin-bottom: 4rem;
+}
+
+.project > .btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.image-item {
+    width: 100%;
+    height: max-content;
+    object-fit: contain;
+    display: flex;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    justify-content: center;
+    margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
@@ -10,12 +34,5 @@
 
     .project {
         height: auto;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .content__container {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
     }
 }

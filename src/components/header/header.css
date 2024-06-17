@@ -9,6 +9,10 @@ header {
     position: relative;
 }
 
+.socials__container {
+    height: 5%;
+}
+
 .intro__container > h1 {
     font-size: 6rem;
 }
@@ -40,7 +44,7 @@ header {
 /* Media Queries (Medium Devices) */
 @media screen and (max-width: 1024px) {
     header {
-        height: 68vh;
+        height: 90vh;
     }
 }
 
