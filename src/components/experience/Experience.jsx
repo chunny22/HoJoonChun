@@ -16,6 +16,7 @@ const Experience = () => {
             <small className='text-light'>May 2023 - Aug 2023</small>
             <ul>
               <li>T&O department, under Risk IT team</li>
+              <li>Involved with the quality assurance of data management projects</li>
               <li>Worked with Python, Tricentis qTest, SQL, and UNIX terminal for testing and data verification</li>
             </ul>
           </div>
@@ -37,8 +38,8 @@ const Experience = () => {
             <h4><a href='https://www.marchnetworks.com/' target='_blank'>March Networks - Ottawa, Canada</a></h4>
             <small className='text-light'>Jan 2022 - Apr 2022</small>
             <ul>
-              <li>Development team of Evidence Vault and Searchlight, data management service for businesses</li>
-              <li>Using Node.js, TypeScript, HTML/CSS, and React framework</li>
+              <li>Development team of Evidence Vault and Searchlight, data management services for businesses</li>
+              <li>Hands on experience with Node.js, TypeScript, HTML/CSS, and React framework</li>
             </ul>
           </div>
         </div>

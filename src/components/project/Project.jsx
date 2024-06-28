@@ -1,7 +1,9 @@
 import React from 'react'
 import './project.css'
+
 import redditLogo from '../../assets/redditlogo.svg'
 import metalDetector from '../../assets/metaldetector.png'
+import spaceTrack from '../../assets/SpaceTrack.png'
 
 const project = () => {
   return (
@@ -43,7 +45,7 @@ const project = () => {
           <div className='project-content'>
             <small className='text-light'>Pygame Video Game</small>
             <div className='image-item'>
-              <image/>
+              <img src={spaceTrack} alt='Space Track'/>
             </div>
             <ul>
               <li>Created using Pygame library.</li>
