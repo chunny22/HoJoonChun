@@ -16,8 +16,8 @@ const app = () => {
       <motion.div
         className='navBar'
         animate={{ y: 0, opacity: 1 }}
-        initial={{ y: -50, opacity: 0 }}
-        transition={{ type: 'tween', duration: 2 }}>
+        initial={{ y: 100, opacity: 0 }}
+        transition={{ type: 'spring', stiffness: 80, mass: 1, delay: 2.5, duration: 2 }}>
           <Nav />
       </motion.div>
       <About />
