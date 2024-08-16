@@ -129,8 +129,11 @@ a {
 
 .navbuttons {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: flex-end;
+    margin-left: auto;
+    width: fit-content;
 }
 
 .nav-text {
