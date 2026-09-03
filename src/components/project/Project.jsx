@@ -1,4 +1,3 @@
-import React from 'react'
 import './project.css'
 
 import redditLogo from '../../assets/redditlogo.svg'
@@ -35,7 +34,7 @@ const project = () => {
             </div>
             <ul>
               <li>Android application developed with Android Studio, Java programming language.</li>
-              <li>Detects nearby magnetic waves with the device's magnetometer.</li>
+              <li>Detects nearby magnetic waves with the device&apos;s magnetometer.</li>
             </ul>
           </div>
           <a href='https://github.com/chunny22/Metal_Detector' target='_blank' className='btn'>View Repository</a>
