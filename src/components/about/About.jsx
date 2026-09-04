@@ -1,10 +1,16 @@
+import { motion } from 'framer-motion'
 import './about.css'
 
 const About = () => {
   return (
     <section id='about'>
         <h2>About me</h2>
-        <div className='container text__container'>
+        <motion.div
+          className='container text__container'
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}>
             <p className='text-medium'>
                 Welcome to my web page!
                 <br /><br />
@@ -20,8 +26,8 @@ const About = () => {
                 of personal projects, along with a publication on arXiv. You can find out about all of them below in this site. If you&apos;d like to
                 reach out, check out my socials below my name in <a href='#'>this section.</a>
             </p>
-        </div>
-        
+        </motion.div>
+
     </section>
   )
 }

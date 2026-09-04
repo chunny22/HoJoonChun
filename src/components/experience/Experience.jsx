@@ -1,14 +1,22 @@
+import { motion } from 'framer-motion'
 import './experience.css'
+
+const cardReveal = (index) => ({
+  initial: { opacity: 0, y: 40 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, amount: 0.3 },
+  transition: { duration: 0.5, ease: 'easeOut', delay: (index % 3) * 0.15 },
+})
 
 const Experience = () => {
   return (
     <section id='experience'>
       <h2>My Experiences</h2>
       <div className='container content__container'>
-        <a href='#resume' className='new-experience'>
+        <motion.a href='#resume' className='new-experience' {...cardReveal(0)}>
           <h3>Currently looking for a new opportunity!</h3>
-        </a>
-        <div className='experience'>
+        </motion.a>
+        <motion.div className='experience' {...cardReveal(1)}>
           <h3>Quality Engineering Analyst</h3>
           <div className='experience__content'>
             <h4><a href='https://www.rbcroyalbank.com' target='_blank'>Royal Bank of Canada - Toronto, Canada</a></h4>
@@ -19,8 +27,8 @@ const Experience = () => {
               <li>Worked with Python, Tricentis qTest, SQL, and UNIX terminal for testing and data verification</li>
             </ul>
           </div>
-        </div>
-        <div className='experience'>
+        </motion.div>
+        <motion.div className='experience' {...cardReveal(2)}>
           <h3>Product Software Developer</h3>
           <div className='experience__content'>
             <h4><a href='https://www.mitel.com/' target='_blank'>Mitel Networks - Ottawa, Canada</a></h4>
@@ -30,8 +38,8 @@ const Experience = () => {
               <li>Utilizing Node.js, TypeScript, HTML/CSS, and Angular framework</li>
             </ul>
           </div>
-        </div>
-        <div className='experience'>
+        </motion.div>
+        <motion.div className='experience' {...cardReveal(3)}>
           <h3>Software Developer</h3>
           <div className='experience__content'>
             <h4><a href='https://www.marchnetworks.com/' target='_blank'>March Networks - Ottawa, Canada</a></h4>
@@ -41,8 +49,8 @@ const Experience = () => {
               <li>Hands on experience with Node.js, TypeScript, HTML/CSS, and React framework</li>
             </ul>
           </div>
-        </div>
-        <div className='experience'>
+        </motion.div>
+        <motion.div className='experience' {...cardReveal(4)}>
           <h3>Business Intelligence Developer</h3>
           <div className='experience__content'>
             <h4><a href='https://inspection.canada.ca/' target='_blank'>Canadian Food Inspection Agency - Ottawa, Canada</a></h4>
@@ -52,8 +60,8 @@ const Experience = () => {
               <li>Devloped using SQL, Toad, IBM DataStage and Cognos Data Manager</li>
             </ul>
           </div>
-        </div>
-        <div className='experience'>
+        </motion.div>
+        <motion.div className='experience' {...cardReveal(5)}>
           <h3>Software Developer Trainee</h3>
           <div className='experience__content'>
             <h4>Jinione Systems - Seongnam, South Korea</h4>
@@ -63,7 +71,7 @@ const Experience = () => {
               <li>Transferred data to a MySQL database using PHP based server managed with WAMP program</li>
             </ul>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   )
