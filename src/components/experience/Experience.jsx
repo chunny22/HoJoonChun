@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import './experience.css'
+import { scrollToHash } from '../../utils/lenis'
 
 const cardReveal = (index) => ({
   initial: { opacity: 0, y: 40 },
@@ -13,7 +14,11 @@ const Experience = () => {
     <section id='experience'>
       <h2>My Experiences</h2>
       <div className='container content__container'>
-        <motion.a href='#resume' className='new-experience' {...cardReveal(0)}>
+        <motion.a
+          href='#resume'
+          className='new-experience'
+          onClick={(event) => { event.preventDefault(); scrollToHash('#resume'); }}
+          {...cardReveal(0)}>
           <h3>Currently looking for a new opportunity!</h3>
         </motion.a>
         <motion.div className='experience' {...cardReveal(1)}>

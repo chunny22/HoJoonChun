@@ -6,7 +6,7 @@ import NavButtons from './NavButtons'
 
 const Header = () => {
   return (
-    <header>
+    <header id='header'>
       <div className='container header__container'>
         <motion.div 
           className='container intro__container'

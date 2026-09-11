@@ -7,14 +7,15 @@ import Experience from './components/experience/Experience'
 import Project from './components/project/Project'
 import Resume from './components/resume/Resume'
 import About from './components/about/About'
+import { setLenis } from './utils/lenis'
 
 const App = () => {
   useEffect(() => {
     const lenis = new Lenis({
       lerp: 0.1,
-      anchors: true,
       wheelMultiplier: 2,
     });
+    setLenis(lenis);
 
     function raf(time) {
       lenis.raf(time);
@@ -25,6 +26,7 @@ const App = () => {
     return () => {
       cancelAnimationFrame(rafId);
       lenis.destroy();
+      setLenis(null);
     };
   }, []);
 
