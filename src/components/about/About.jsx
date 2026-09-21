@@ -1,11 +1,16 @@
-import React from 'react'
+import { motion } from 'framer-motion'
 import './about.css'
 
 const About = () => {
   return (
     <section id='about'>
         <h2>About me</h2>
-        <div className='container text__container'>
+        <motion.div
+          className='container text__container'
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}>
             <p className='text-medium'>
                 Welcome to my web page!
                 <br /><br />
@@ -15,14 +20,14 @@ const About = () => {
                 <br /><br />
                 In my spare time, I like to cook while listening to music, most of the time cooking Korean or Italian food. I also enjoy 
                 spending time drinking coffee while listening to Jazz. Something about jazz is really soothing and it helps me to relax. 
-                Which is why I'll be playing couple Jazz songs in the background while you are here, hoping it does the same to you too! (Currently WIP) 
+                Which is why I&apos;ll be playing couple Jazz songs in the background while you are here, hoping it does the same to you too! (Currently WIP)
                 <br /><br />
-                I have done numerous internships in the past, and I am currently looking for new opportunities as a new grad. I have done couple 
-                of personal projects, along with a publication on arXiv. You can find out about all of them below in this site. If you'd like to 
+                I have done numerous internships in the past, and I am currently looking for new opportunities as a new grad. I have done couple
+                of personal projects, along with a publication on arXiv. You can find out about all of them below in this site. If you&apos;d like to
                 reach out, check out my socials below my name in <a href='#'>this section.</a>
             </p>
-        </div>
-        
+        </motion.div>
+
     </section>
   )
 }

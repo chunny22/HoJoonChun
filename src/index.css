@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap');
 
 * {
     margin: 0;
@@ -27,16 +27,12 @@
     --container-width-sm: 90%;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 ::-webkit-scrollbar {
     display: none;
 }
 
 body {
-    font-family: "Mukta", sans-serif;
+    font-family: "Inter", sans-serif;
     background: var(--color-bg);
     color: var(--color-black);
     line-height: 1.7;

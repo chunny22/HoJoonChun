@@ -1,32 +1,45 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import { useEffect } from 'react'
+import Lenis from 'lenis'
 
 import Header from './components/header/Header'
 import Nav from './components/nav/Nav'
 import Experience from './components/experience/Experience'
 import Project from './components/project/Project'
 import Resume from './components/resume/Resume'
-import Footer from './components/footer/Footer'
 import About from './components/about/About'
+import { setLenis } from './utils/lenis'
 
-const app = () => {
+const App = () => {
+  useEffect(() => {
+    const lenis = new Lenis({
+      lerp: 0.1,
+      wheelMultiplier: 2,
+    });
+    setLenis(lenis);
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    const rafId = requestAnimationFrame(raf);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      lenis.destroy();
+      setLenis(null);
+    };
+  }, []);
+
   return (
     <>
       <Header />
-      <motion.div
-        className='navBar'
-        animate={{ y: 0, opacity: 1 }}
-        initial={{ y: 100, opacity: 0 }}
-        transition={{ type: 'spring', stiffness: 80, mass: 1, delay: 2.5, duration: 2 }}>
-          <Nav />
-      </motion.div>
       <About />
       <Experience />
       <Project />
       <Resume />
-      <Footer /> 
+      <Nav />
     </>
   )
 }
 
-export default app
+export default App

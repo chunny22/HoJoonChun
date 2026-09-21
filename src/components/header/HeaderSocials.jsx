@@ -1,4 +1,3 @@
-import React from 'react'
 import { motion } from 'framer-motion'
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaGithub } from 'react-icons/fa';

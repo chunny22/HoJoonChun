@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import './resume.css';
 import ResumePDF from '../../assets/resume.pdf';
 
