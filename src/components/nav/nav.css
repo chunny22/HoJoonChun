@@ -1,35 +1,49 @@
-nav {
-    background: rgba(0, 0, 0, 0.2);
-    width: max-content;
-    display: block;
-    padding: 0.7rem 1.7rem;
-    z-index: 2;
+.dock {
     position: fixed;
     left: 0;
     right: 0;
+    bottom: 28px;
+    z-index: 2;
+    width: max-content;
     margin-inline: auto;
-    bottom: 2rem;
     display: flex;
-    gap: 0.8rem;
-    border-radius: 3rem;
-    backdrop-filter: blur(15px);
+    gap: 6px;
+    padding: 8px;
+    border-radius: var(--radius-pill);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 1px 2px rgba(27, 27, 26, 0.06), 0 12px 32px rgba(27, 27, 26, 0.12);
 }
 
-nav a {
-    background: transparent;
-    padding: 0.9rem;
+.dock a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
-    display: flex;
-    color: var(--color-light);
-    font-size: 1.1rem;
+    color: var(--color-ink-muted);
+    font-size: 1.2rem;
 }
 
-nav a:active {
-    background: var(--color-bg);
-    color: var(--color-white);
+.dock a:hover {
+    background: var(--color-panel-warm);
+    color: var(--color-ink);
 }
 
-nav a:hover {
-    background: rgba(0, 0, 0, 0.3);
-    color: var(--color-white);
+.dock a.active {
+    background: var(--color-ink);
+    color: var(--color-surface);
+}
+
+@media screen and (max-width: 640px) {
+    .dock {
+        bottom: 16px;
+    }
+
+    .dock a {
+        width: 44px;
+        height: 44px;
+    }
 }

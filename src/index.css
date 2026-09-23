@@ -1,30 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:opsz,wght@9..40,400..700&display=swap');
 
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     border: 0;
-    outline: 0;
     box-sizing: border-box;
-    text-decoration: none;
 }
 
 :root {
-    --color-bg: #EAE3C0;
-    --color-bg-variant: #F9F6E5;
-    --color-primary: #D5BC3D;
-    --color-primary-variant: rgba(214, 204, 117, 0.4);
-    --color-black: #000;
-    --color-white: #fff;
-    --color-hover: #B49700;
-    --color-light: rgba(0, 0, 0, 0.3);
-    --color-medium: rgba(0, 0, 0, 0.5);
+    --color-bg: #FBFAF8;
+    --color-surface: #FFFFFF;
+    --color-ink: #1B1B1A;
+    --color-ink-soft: #3E3D39;
+    --color-ink-muted: #4E4D48;
+    --color-line: #E4DED3;
 
-    --transition: all 400ms ease;
+    --color-hero: #F6E4D6;
+    --color-panel-neutral: #EFF0F2;
+    --color-panel-warm: #F3ECE2;
 
-    --container-width-lg: 75%;
-    --container-width-md: 86%;
-    --container-width-sm: 90%;
+    --color-accent: #B4512A;
+    --color-accent-deep: #6E2E14;
+
+    --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+
+    --radius-panel: 48px;
+    --radius-card: 28px;
+    --radius-pill: 999px;
+
+    --page-gutter: 24px;
+    --panel-padding-y: 144px;
+    --panel-padding-x: 112px;
+
+    --transition: 200ms ease;
 }
 
 ::-webkit-scrollbar {
@@ -32,143 +43,144 @@
 }
 
 body {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     background: var(--color-bg);
-    color: var(--color-black);
-    line-height: 1.7;
-}
-
-.container {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.content__container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    width: 85%;
-}
-
-.content__container > div, .new-experience {
-    background: var(--color-bg-variant);
-    padding: 2rem 2rem;
-    border-radius: 2rem;
-    border: 1px solid transparent;
-}
-
-.content__container > div h3 {
-    color: var(--color-primary);
-}
-
-h1, h2, h3, h4, h5 {
-    font-weight: 500;
-}
-
-h4 {
-    font-size: 0.9rem;
-}
-
-h1 {
-    font-size: 2.5rem;
-}
-
-section {
-    padding-top: 5rem;
-    min-height: 85vh;
-}
-
-section > h2, section > h5 {
-    text-align: center;
-    color: var(--color-light);
-}
-
-section > h2 {
-    color: var(--color-primary);
-    margin-bottom: 2rem;
-    font-size: 2rem;
-}
-
-.text-light {
-    color: var(--color-light);
-}
-
-.text-medium {
-    color: var(--color-medium);
-}
-
-a {
-    color: var(--color-primary);
-    transition: var(--transition);
-}
-
-.btn {
-    width: max-content;
-    display: inline-block;
-    color: var(--color-primary);
-    padding: 0.75rem 1.2rem;
-    border-radius: 0.4rem;
-    border: 1px solid var(--color-primary);
-    transition: var(--transition);
-}
-
-.btn:hover {
-    background: var(--color-hover);
-    color: var(--color-bg);
-    border-color: transparent;
-}
-
-.btn-primary {
-    background: var(--color-primary);
-    color: var(--color-bg);
-}
-
-.navbuttons {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-left: auto;
-    width: fit-content;
-}
-
-.nav-text {
-    cursor: pointer;
-    display: flex;
-    color: var(--color-black);
-    text-decoration: underline;
-    margin-bottom: 1.2rem;
-    font-size: 2.5rem;
-}
-
-.nav-text:hover {
-    color: #F3CF1B;
+    color: var(--color-ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
 
 img {
     display: block;
-    width: 100%;
-    object-fit: cover;
+    max-width: 100%;
 }
 
-/* Media Queries (Medium Devices) */
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition), background-color var(--transition), border-color var(--transition);
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 1;
+}
+
+/* ===== Page layout ===== */
+
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--page-gutter);
+    padding: var(--page-gutter);
+    padding-bottom: 0;
+}
+
+.panel {
+    border-radius: var(--radius-panel);
+    padding: var(--panel-padding-y) var(--panel-padding-x);
+}
+
+.panel--neutral {
+    background: var(--color-panel-neutral);
+}
+
+.panel--warm {
+    background: var(--color-panel-warm);
+}
+
+.panel__heading {
+    font-size: clamp(2.75rem, 6vw, 3.75rem);
+}
+
+.panel__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 72px;
+}
+
+.panel__meta {
+    font-size: 1.0625rem;
+    color: var(--color-ink-muted);
+}
+
+/* ===== Buttons ===== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 58px;
+    padding: 0 32px;
+    border-radius: var(--radius-pill);
+    background: var(--color-surface);
+    color: var(--color-ink);
+    font-size: 1.0625rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.btn:hover {
+    background: var(--color-ink);
+    color: var(--color-surface);
+}
+
+.btn--primary {
+    background: var(--color-ink);
+    color: var(--color-surface);
+}
+
+.btn--primary:hover {
+    background: var(--color-accent-deep);
+}
+
+.btn--small {
+    height: 48px;
+    padding: 0 24px;
+    font-size: 1rem;
+}
+
+.btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* ===== Media Queries (Medium Devices) ===== */
 @media screen and (max-width: 1024px) {
-    .container {
-        width: var(--container-width-md);
-    }
-
-    section {
-        margin-top: 6rem;
+    :root {
+        --panel-padding-y: 112px;
+        --panel-padding-x: 64px;
     }
 }
 
-/* Media Queries (Small Devices) */
-@media screen and (max-width: 600px) {
-    .container {
-        width: var(--container-width-sm);
+/* ===== Media Queries (Small Devices) ===== */
+@media screen and (max-width: 640px) {
+    :root {
+        --radius-panel: 32px;
+        --radius-card: 22px;
+        --page-gutter: 12px;
+        --panel-padding-y: 80px;
+        --panel-padding-x: 24px;
     }
 
-    section > h2{
-        margin-bottom: 2rem;
+    .panel__header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 48px;
+    }
+
+    .btn {
+        height: 52px;
+        padding: 0 24px;
     }
 }
