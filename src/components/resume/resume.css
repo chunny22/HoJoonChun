@@ -1,25 +1,58 @@
-.section > h5 {
-    margin-top: 5%;
+.resume {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 32px;
+    row-gap: 56px;
+    align-items: center;
+    background: var(--color-hero);
 }
 
-#resume {
-    padding-bottom: 8rem;
+.resume__intro {
+    grid-column: span 5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+}
+
+.resume__intro p {
+    max-width: 380px;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: var(--color-ink-soft);
+}
+
+.resume__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding-top: 8px;
+}
+
+.resume__preview {
+    grid-column: 7 / span 6;
+    padding: 12px;
+    border-radius: var(--radius-card);
+    background: var(--color-surface);
 }
 
 .resumeDoc {
-    width: 40rem;
-    height: 50rem;
-    overflow: hidden;
+    display: block;
+    width: 100%;
+    aspect-ratio: 8.5 / 11;
+    border-radius: calc(var(--radius-card) - 10px);
+    background: var(--color-panel-neutral);
 }
 
-.resume__container {
-    text-align: center;
-    display: grid;
-    justify-content: center;
+@media screen and (max-width: 1024px) {
+    .resume__intro,
+    .resume__preview {
+        grid-column: 1 / -1;
+    }
 }
 
-.resume__container > .btn-primary {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    justify-self: center;
+@media screen and (max-width: 640px) {
+    .resume__preview {
+        display: none;
+    }
 }

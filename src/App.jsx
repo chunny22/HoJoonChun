@@ -7,6 +7,7 @@ import Experience from './components/experience/Experience'
 import Project from './components/project/Project'
 import Resume from './components/resume/Resume'
 import About from './components/about/About'
+import Footer from './components/footer/Footer'
 import { setLenis } from './utils/lenis'
 
 const App = () => {
@@ -32,11 +33,14 @@ const App = () => {
 
   return (
     <>
-      <Header />
-      <About />
-      <Experience />
-      <Project />
-      <Resume />
+      <main className='page'>
+        <Header />
+        <About />
+        <Experience />
+        <Project />
+        <Resume />
+        <Footer />
+      </main>
       <Nav />
     </>
   )

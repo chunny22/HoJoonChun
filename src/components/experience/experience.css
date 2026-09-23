@@ -1,8 +1,85 @@
-h4 > a {
-    color: var(--color-medium);
-    text-decoration: underline;
+.experience__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
 }
 
-a:hover {
-    color: var(--color-black);
+.experience__card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 48px;
+    border-radius: var(--radius-card);
+    background: var(--color-surface);
+}
+
+/* An odd card out spans the full row instead of sitting alone */
+.experience__card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+}
+
+.experience__dates {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-ink-muted);
+}
+
+.experience__title {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.experience__title h3 {
+    font-size: 1.6875rem;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+}
+
+.experience__company {
+    font-size: 1.0625rem;
+    color: var(--color-ink-muted);
+}
+
+.experience__company a {
+    color: var(--color-ink);
+    text-decoration: underline;
+    text-decoration-color: var(--color-line);
+    text-underline-offset: 4px;
+}
+
+.experience__company a:hover {
+    color: var(--color-accent);
+    text-decoration-color: currentColor;
+}
+
+.experience__points {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 20px;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: var(--color-ink-soft);
+}
+
+.experience__points li::marker {
+    color: var(--color-accent);
+}
+
+@media screen and (max-width: 900px) {
+    .experience__grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .experience__card {
+        padding: 32px 24px;
+    }
+
+    .experience__title h3 {
+        font-size: 1.5rem;
+    }
 }

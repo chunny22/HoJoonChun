@@ -8,12 +8,12 @@ const handleNavClick = (hash) => (event) => {
 
 const NavButtons = () => {
     return (
-        <div className='navbuttons'>
-            <a href='#about' onClick={handleNavClick('#about')} className='nav-text'>About Me</a>
-            <a href='#experience' onClick={handleNavClick('#experience')} className='nav-text'>Experiences</a>
+        <nav className='navbuttons' aria-label='Primary'>
+            <a href='#about' onClick={handleNavClick('#about')} className='nav-text'>About</a>
+            <a href='#experience' onClick={handleNavClick('#experience')} className='nav-text'>Experience</a>
             <a href='#project' onClick={handleNavClick('#project')} className='nav-text'>Projects</a>
-            <a href='#resume' onClick={handleNavClick('#resume')} className='nav-text'>Resume</a>
-        </div>
+            <a href='#resume' onClick={handleNavClick('#resume')} className='nav-text nav-text--pill'>Résumé</a>
+        </nav>
     )
 }
 
