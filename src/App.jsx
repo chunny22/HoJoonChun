@@ -8,6 +8,7 @@ import Project from './components/project/Project'
 import Resume from './components/resume/Resume'
 import About from './components/about/About'
 import Footer from './components/footer/Footer'
+import Player from './components/player/Player'
 import { setLenis } from './utils/lenis'
 
 const App = () => {
@@ -42,6 +43,7 @@ const App = () => {
         <Footer />
       </main>
       <Nav />
+      <Player />
     </>
   )
 }

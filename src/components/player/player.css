@@ -1,0 +1,132 @@
+.player {
+    position: fixed;
+    left: 28px;
+    bottom: 28px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 8px 8px 8px;
+    border-radius: var(--radius-pill);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 1px 2px rgba(27, 27, 26, 0.06), 0 12px 32px rgba(27, 27, 26, 0.12);
+}
+
+.player__toggle,
+.player__next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color var(--transition), color var(--transition);
+}
+
+.player__toggle {
+    width: 48px;
+    height: 48px;
+    background: var(--color-ink);
+    color: var(--color-surface);
+}
+
+.player__toggle:hover {
+    background: var(--color-accent-deep);
+}
+
+.player__next {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    color: var(--color-ink-muted);
+}
+
+.player__next:hover {
+    background: var(--color-panel-warm);
+    color: var(--color-ink);
+}
+
+.player__info {
+    display: flex;
+    flex-direction: column;
+    max-width: 150px;
+    line-height: 1.25;
+}
+
+.player__title,
+.player__artist {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.player__title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-ink);
+}
+
+.player__artist {
+    font-size: 0.8rem;
+    color: var(--color-ink-muted);
+}
+
+.player__bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 16px;
+}
+
+.player__bars i {
+    display: block;
+    width: 3px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--color-accent);
+}
+
+.player__bars--on i {
+    animation: player-bar 900ms ease-in-out infinite;
+}
+
+.player__bars--on i:nth-child(2) {
+    animation-delay: -300ms;
+}
+
+.player__bars--on i:nth-child(3) {
+    animation-delay: -600ms;
+}
+
+@keyframes player-bar {
+    0%, 100% { height: 4px; }
+    50% { height: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .player__bars--on i {
+        animation: none;
+        height: 10px;
+    }
+}
+
+/* The dock is centered at the bottom; stack above it once they'd collide */
+@media screen and (max-width: 860px) {
+    .player {
+        bottom: 108px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .player {
+        left: 12px;
+        bottom: 88px;
+    }
+
+    .player__info {
+        max-width: 110px;
+    }
+}
