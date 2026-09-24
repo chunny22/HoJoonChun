@@ -64,6 +64,18 @@
     border-radius: 20px;
 }
 
+.project__media svg {
+    width: 30%;
+    max-width: 104px;
+    height: auto;
+    aspect-ratio: 1;
+}
+
+.project__media--workout {
+    background: #E4EFE4;
+    color: #2F5D3A;
+}
+
 .project__body {
     display: flex;
     flex-direction: column;
@@ -108,6 +120,15 @@
 
 .project__link {
     margin-top: 12px;
+}
+
+/* In side-by-side cards, keep the buttons aligned at the bottom of the row */
+.project__card:not(.project__card--featured) .project__body {
+    flex: 1;
+}
+
+.project__card:not(.project__card--featured) .project__link {
+    margin-top: auto;
 }
 
 @media screen and (max-width: 900px) {

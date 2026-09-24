@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { FiArrowUpRight } from 'react-icons/fi'
+import { FaDumbbell } from 'react-icons/fa'
 import './project.css'
 
 import redditLogo from '../../assets/redditlogo.svg'
@@ -13,9 +14,26 @@ const cardReveal = (index) => ({
   transition: { duration: 0.5, ease: 'easeOut', delay: (index % 2) * 0.15 },
 })
 
+// Newest first
 const projects = [
   {
+    title: 'Workout Tracker App',
+    featured: true,
+    label: 'Full-stack personal project',
+    icon: FaDumbbell,
+    tone: 'workout',
+    link: 'https://github.com/chunny22/Workout-Tracker',
+    linkLabel: 'View Repository',
+    points: [
+      'Log workouts from a library of about 70 exercises with sets, reps, weight and per-set RPE, either as a plan for later or as done.',
+      'Calendar view with a day page that maps the muscles you trained onto a front and back body heatmap.',
+      'Progress views for activity, estimated 1RM strength trends and body weight, plus a short AI coaching comment for each day.',
+      'Built with React, TypeScript and Supabase (auth, Postgres with row-level security, Edge Functions), synced across PC and phone and covered by Vitest unit tests and CI.',
+    ],
+  },
+  {
     title: 'Longitudinal Sentiment Classification of Reddit Posts',
+    featured: true,
     label: 'Honours Bachelors Project / arXiv Publication',
     image: redditLogo,
     imageAlt: 'Reddit Logo',
@@ -67,11 +85,13 @@ const Project = () => {
       <div className='project__grid'>
         {projects.map((item, index) => (
           <motion.article
-            className={index === 0 ? 'project__card project__card--featured' : 'project__card'}
+            className={item.featured ? 'project__card project__card--featured' : 'project__card'}
             key={item.title}
             {...cardReveal(index)}>
             <div className={`project__media project__media--${item.tone}`}>
-              <img src={item.image} alt={item.imageAlt} />
+              {item.image
+                ? <img src={item.image} alt={item.imageAlt} />
+                : <item.icon aria-hidden='true' />}
             </div>
             <div className='project__body'>
               <span className='project__label'>{item.label}</span>
