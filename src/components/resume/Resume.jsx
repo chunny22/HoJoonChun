@@ -1,6 +1,7 @@
 import { FiDownload, FiArrowUpRight } from 'react-icons/fi';
 import './resume.css';
 import ResumePDF from '../../assets/resume.pdf';
+import resumePreview from '../../assets/resume-preview.webp';
 
 const Resume = () => {
 
@@ -15,12 +16,16 @@ const Resume = () => {
         </div>
       </div>
       <div className='resume__preview'>
-        <iframe
-          src="https://drive.google.com/file/d/1pHFfu3AVrBZQIehADDa3uwPW3JR0TE79/preview"
-          title='Résumé preview'
-          loading='lazy'
-          className='resumeDoc'>
-        </iframe>
+        <a href={ResumePDF} target='_blank' rel='noopener noreferrer'>
+          <img
+            src={resumePreview}
+            width='1440'
+            height='1864'
+            alt="Preview of Justin Chun's résumé. Select it to open the PDF."
+            loading='lazy'
+            decoding='async'
+            className='resumeDoc' />
+        </a>
       </div>
     </section>
   )

@@ -36,9 +36,14 @@
     background: var(--color-surface);
 }
 
+.resume__preview a {
+    display: block;
+}
+
 .resumeDoc {
     display: block;
     width: 100%;
+    height: auto;
     aspect-ratio: 8.5 / 11;
     border-radius: calc(var(--radius-card) - 10px);
     background: var(--color-panel-neutral);
